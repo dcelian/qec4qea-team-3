@@ -1,0 +1,7 @@
+qiskit
+qiskit-aer
+scikit-learn
+mitiq
+matplotlib
+numpy
+pytest
