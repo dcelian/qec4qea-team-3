@@ -57,5 +57,29 @@ def main():
 
     print(f"Sukces! Zapisano {len(df)} próbek do: data/iq_training_data.csv")
 
+    import matplotlib.pyplot as plt
+
+    plt.scatter(
+    df[df.State == 0]["I"],
+    df[df.State == 0]["Q"],
+    alpha=0.3,
+    label="State 0"
+)
+
+    plt.scatter(
+    df[df.State == 1]["I"],
+    df[df.State == 1]["Q"],
+    alpha=0.3,
+    label="State 1"
+)
+
+    plt.xlabel("I")
+    plt.ylabel("Q")
+    plt.legend()
+    plt.title("I/Q Calibration Data")
+
+    plt.show()
+
 if __name__ == "__main__":
     main()
+
